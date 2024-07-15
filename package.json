@@ -10,7 +10,8 @@
     "test": "jest --collectCoverage",
     "test:watch": "jest --watchAll",
     "test:updateSnapshot": "jest --updateSnapshot",
-    "test:playwright": "playwright test"
+    "test:playwright": "playwright test --reporter=dot",
+    "test:ui": "playwright test --ui"
   },
   "dependencies": {
     "next": "14.2.5",

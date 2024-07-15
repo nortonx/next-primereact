@@ -9,7 +9,8 @@ test("Word Count Page", async ({ page }) => {
 test("Input Words", async ({ page }) => {
   await page.goto("http:localhost:3080/word-count")
   await page.getByTestId("word-count-textarea").focus()
-  
-  
-  await expect(page.getByTestId("words")).toHaveText("0")
+  await page.keyboard.type("Hello World")
+
+  await expect(page.getByTestId("words-value")).toHaveText("2")
+  await expect(page.getByTestId("characters-value")).toHaveText("11")
 })

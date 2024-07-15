@@ -53,10 +53,10 @@ const WordCountPage = () => {
       </div>
       <div className="counters flex gap-2 justify-content-around mt-3">
         <Card title="Words" className="w-3" data-testid="words">
-          <span className="text-xl font-medium">{wordCounter(content)}</span>
+          <span className="text-xl font-medium" data-testid="words-value">{wordCounter(content)}</span>
         </Card>
-        <Card title="Characters" className="w-3">
-          <span className="text-xl font-medium">{characterCounter(content)}</span>
+        <Card title="Characters" className="w-3" data-testid="characters">
+          <span className="text-xl font-medium" data-testid="characters-value">{characterCounter(content)}</span>
         </Card>
         <Card title="Sentences" className="w-3">
           <span className="text-xl font-medium">{sentencesCounter(content)}</span>
