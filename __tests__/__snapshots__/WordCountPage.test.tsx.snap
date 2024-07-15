@@ -3,16 +3,34 @@
 exports[`Wound Count Page should render page and match snapshot 1`] = `
 <div>
   <section
-    class="p-3"
+    class="p-3 surface-section text-center"
     data-testid="word-count-page"
   >
+    <h1
+      class="text-900 font-bold text-6xl"
+    >
+      Word Counter
+    </h1>
     <div
-      class="row"
+      class="input-text flex justify-content-center"
+    >
+      <textarea
+        class="w-6 p-inputtextarea p-inputtext p-component p-inputtextarea-resizable w-6"
+        data-pc-name="inputtextarea"
+        data-pc-section="root"
+        data-testid="word-count-textarea"
+        rows="10"
+        style="overflow: hidden; height: 0px;"
+      />
+    </div>
+    <div
+      class="counters flex gap-2 justify-content-around mt-3"
     >
       <div
-        class="w-2 flex p-card p-component"
+        class="w-3 p-card p-component"
         data-pc-name="card"
         data-pc-section="root"
+        data-testid="words"
       >
         <div
           class="p-card-body"
@@ -30,6 +48,7 @@ exports[`Wound Count Page should render page and match snapshot 1`] = `
           >
             <span
               class="text-xl font-medium"
+              data-testid="words-value"
             >
               0
             </span>
@@ -37,9 +56,10 @@ exports[`Wound Count Page should render page and match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="w-2 p-card p-component"
+        class="w-3 p-card p-component"
         data-pc-name="card"
         data-pc-section="root"
+        data-testid="characters"
       >
         <div
           class="p-card-body"
@@ -57,6 +77,7 @@ exports[`Wound Count Page should render page and match snapshot 1`] = `
           >
             <span
               class="text-xl font-medium"
+              data-testid="characters-value"
             >
               0
             </span>
@@ -64,7 +85,7 @@ exports[`Wound Count Page should render page and match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="w-2 p-card p-component"
+        class="w-3 p-card p-component"
         data-pc-name="card"
         data-pc-section="root"
       >
@@ -91,7 +112,7 @@ exports[`Wound Count Page should render page and match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="w-2 p-card p-component"
+        class="w-3 p-card p-component"
         data-pc-name="card"
         data-pc-section="root"
       >
@@ -118,13 +139,6 @@ exports[`Wound Count Page should render page and match snapshot 1`] = `
         </div>
       </div>
     </div>
-    <textarea
-      class="w-6 p-inputtextarea p-inputtext p-component p-inputtextarea-resizable w-6"
-      data-pc-name="inputtextarea"
-      data-pc-section="root"
-      rows="10"
-      style="overflow: hidden; height: 0px;"
-    />
   </section>
 </div>
 `;
