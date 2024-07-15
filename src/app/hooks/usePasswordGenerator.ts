@@ -5,7 +5,7 @@ export default function usePasswordGenerator() {
     const [rangeInputValue, setRangeInputValue] = useState<number>(8);
     const [password, setPassword] = useState<string>("");
 
-    const [enableUppercaseLetters, setUppercaseLetters] = useState<boolean>(false);
+    const [enableUppercaseLetters, setEnableUppercaseLetters] = useState<boolean>(false);
     const [enableNumbers, setEnableNumbers] = useState<boolean>(false);
     const [enableSpecialCharacters, setEnableSpecialCharacters] = useState<boolean>(false);
 
@@ -22,7 +22,7 @@ export default function usePasswordGenerator() {
     }
 
     const checkSpecialCharacters = (password: string) => {
-        return Boolean(password.match(/[`!@#$%^&*()_+\-=[\]{};':"\\|,.<>\/?~]/))
+        return Boolean(password.match(/[`!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?~]/))
     }
 
     const generatePassword = () => {
@@ -70,7 +70,7 @@ export default function usePasswordGenerator() {
         password,
         setPassword,
         enableUppercaseLetters,
-        setUppercaseLetters,
+        setEnableUppercaseLetters,
         enableNumbers,
         setEnableNumbers,
         enableSpecialCharacters,
