@@ -33,7 +33,7 @@ const Header = () => {
     ];
 
     return(
-        <Menubar model={items} data-testid="header"></Menubar>
+        <Menubar model={items} data-testid="header" className="mb-4"></Menubar>
     )
 }
 

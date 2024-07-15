@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Card } from "primereact/card";
 import { InputTextarea } from "primereact/inputtextarea"
-import styles from "./page.module.css";
+
 
 const WordCountPage = () => {
   const [content, setContent] = useState("")
@@ -39,28 +39,32 @@ const WordCountPage = () => {
   }
 
   return(
-    <section className="p-3" data-testid="word-count-page">
-      <div className={styles.row}>
-        <Card title="Words" className="w-2 flex">
+    <section className="p-3 surface-section text-center" data-testid="word-count-page">
+      <h1 className="text-900 font-bold text-6xl">Word Counter</h1>
+      <div className="input-text flex justify-content-center">
+        <InputTextarea
+          value={content}
+          onChange={e => onChangeText(e.target.value)}
+          autoResize
+          className="w-6"
+          rows={10}
+        />
+      </div>
+      <div className="counters flex gap-2 justify-content-around mt-3">
+        <Card title="Words" className="w-3">
           <span className="text-xl font-medium">{wordCounter(content)}</span>
         </Card>
-        <Card title="Characters" className="w-2">
+        <Card title="Characters" className="w-3">
           <span className="text-xl font-medium">{characterCounter(content)}</span>
         </Card>
-        <Card title="Sentences" className="w-2">
+        <Card title="Sentences" className="w-3">
           <span className="text-xl font-medium">{sentencesCounter(content)}</span>
         </Card>
-        <Card title="Paragraphs" className="w-2">
+        <Card title="Paragraphs" className="w-3">
           <span className="text-xl font-medium">{paragraphsCounter(content)}</span>
         </Card>
       </div>
-      <InputTextarea
-        value={content}
-        onChange={e => onChangeText(e.target.value)}
-        autoResize
-        className="w-6"
-        rows={10}
-      />
+      
     </section>
   )
 }

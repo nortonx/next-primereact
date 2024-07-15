@@ -17,7 +17,7 @@ const PasswordGeneratorPage = () => {
         password,
         setPassword,
         enableUppercaseLetters,
-        setUppercaseLetters,
+        setEnableUppercaseLetters,
         enableNumbers,
         setEnableNumbers,
         enableSpecialCharacters,
@@ -47,9 +47,9 @@ const PasswordGeneratorPage = () => {
             <div className="text-900 font-bold text-6xl mb-4 text-center">Password Generator</div>
 
             <div className="grid">
-                <div className="col-12 lg:col-4"></div>
-                <div className="col-12 lg:col-4">
-                    <div className="p-3 h-full">
+                
+                <div className="col-12 lg:col-6 lg:col-offset-3">
+                    <div className="p-3 h-full flex justify-content-center">
                         <div className="shadow-2 p-3 h-full flex flex-column">
                             <InputText
                                 value={password}
@@ -67,7 +67,7 @@ const PasswordGeneratorPage = () => {
                                 <Checkbox
                                     inputId="uppercaseLetters"
                                     checked={enableUppercaseLetters}
-                                    onChange={() => setUppercaseLetters(!enableUppercaseLetters)}
+                                    onChange={() => setEnableUppercaseLetters(!enableUppercaseLetters)}
                                 />
                                 <label htmlFor="uppercaseLetters" className="ml-2">
                                     Enable Uppercase Letters
