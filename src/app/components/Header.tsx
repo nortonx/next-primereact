@@ -11,6 +11,11 @@ const Header = () => {
             url: '/'
         },
         {
+            label: 'Word Count',
+            icon: 'pi pi-fw pi-pencil',
+            url: '/word-count'
+        },
+        {
             label: 'Password Generator',
             icon: 'pi pi-fw pi-key',
             url: '/password-generator'
