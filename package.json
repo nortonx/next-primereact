@@ -9,7 +9,8 @@
     "lint": "next lint",
     "test": "jest --collectCoverage",
     "test:watch": "jest --watchAll",
-    "test:updateSnapshot": "jest --updateSnapshot"
+    "test:updateSnapshot": "jest --updateSnapshot",
+    "test:playwright": "playwright test"
   },
   "dependencies": {
     "next": "14.2.5",
