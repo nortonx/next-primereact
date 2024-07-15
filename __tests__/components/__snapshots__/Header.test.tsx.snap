@@ -3,7 +3,7 @@
 exports[`Header should render and match snapshot 1`] = `
 <div>
   <div
-    class="p-menubar p-component"
+    class="mb-4 p-menubar p-component"
     data-pc-name="menubar"
     data-pc-section="root"
     data-testid="header"
@@ -50,7 +50,7 @@ exports[`Header should render and match snapshot 1`] = `
         aria-label="Home"
         aria-level="1"
         aria-posinset="1"
-        aria-setsize="4"
+        aria-setsize="5"
         class="p-menuitem"
         data-id="pr_id_1_0"
         data-p-disabled="false"
@@ -94,12 +94,59 @@ exports[`Header should render and match snapshot 1`] = `
       </li>
       <li
         aria-disabled="false"
-        aria-label="Password Generator"
+        aria-label="Word Count"
         aria-level="1"
         aria-posinset="2"
-        aria-setsize="4"
+        aria-setsize="5"
         class="p-menuitem"
         data-id="pr_id_1_1"
+        data-p-disabled="false"
+        data-p-focused="false"
+        data-p-highlight="false"
+        data-pc-section="menuitem"
+        role="menuitem"
+      >
+        <div
+          class="p-menuitem-content"
+          data-pc-section="content"
+        >
+          <a
+            aria-haspopup="false"
+            aria-hidden="true"
+            class="p-menuitem-link"
+            data-pc-section="action"
+            href="/word-count"
+            tabindex="-1"
+          >
+            <span
+              class="p-menuitem-icon pi pi-fw pi-pencil"
+              data-pc-section="icon"
+            />
+            <span
+              class="p-menuitem-text"
+              data-pc-section="label"
+            >
+              Word Count
+            </span>
+          </a>
+        </div>
+        <ul
+          class="p-submenu-list"
+          data-id="pr_id_1"
+          data-pc-section="submenu"
+          level="1"
+          role="menu"
+          style="display: none;"
+        />
+      </li>
+      <li
+        aria-disabled="false"
+        aria-label="Password Generator"
+        aria-level="1"
+        aria-posinset="3"
+        aria-setsize="5"
+        class="p-menuitem"
+        data-id="pr_id_1_2"
         data-p-disabled="false"
         data-p-focused="false"
         data-p-highlight="false"
@@ -143,10 +190,10 @@ exports[`Header should render and match snapshot 1`] = `
         aria-disabled="false"
         aria-label="Table Data"
         aria-level="1"
-        aria-posinset="3"
-        aria-setsize="4"
+        aria-posinset="4"
+        aria-setsize="5"
         class="p-menuitem"
-        data-id="pr_id_1_2"
+        data-id="pr_id_1_3"
         data-p-disabled="false"
         data-p-focused="false"
         data-p-highlight="false"
@@ -190,10 +237,10 @@ exports[`Header should render and match snapshot 1`] = `
         aria-disabled="false"
         aria-label="About"
         aria-level="1"
-        aria-posinset="4"
-        aria-setsize="4"
+        aria-posinset="5"
+        aria-setsize="5"
         class="p-menuitem"
-        data-id="pr_id_1_3"
+        data-id="pr_id_1_4"
         data-p-disabled="false"
         data-p-focused="false"
         data-p-highlight="false"
