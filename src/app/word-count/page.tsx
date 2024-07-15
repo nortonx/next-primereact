@@ -48,10 +48,11 @@ const WordCountPage = () => {
           autoResize
           className="w-6"
           rows={10}
+          data-testid="word-count-textarea"
         />
       </div>
       <div className="counters flex gap-2 justify-content-around mt-3">
-        <Card title="Words" className="w-3">
+        <Card title="Words" className="w-3" data-testid="words">
           <span className="text-xl font-medium">{wordCounter(content)}</span>
         </Card>
         <Card title="Characters" className="w-3">
