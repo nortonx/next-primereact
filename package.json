@@ -6,7 +6,10 @@
     "dev": "next dev -p 3080",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --collectCoverage",
+    "test:watch": "jest --watchAll",
+    "test:updateSnapshot": "jest --updateSnapshot"
   },
   "dependencies": {
     "next": "14.2.5",

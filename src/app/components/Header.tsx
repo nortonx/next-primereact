@@ -28,7 +28,7 @@ const Header = () => {
     ];
 
     return(
-        <Menubar model={items}></Menubar>
+        <Menubar model={items} data-testid="header"></Menubar>
     )
 }
 
