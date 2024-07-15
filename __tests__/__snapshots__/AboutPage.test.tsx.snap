@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About Page should render and match snapshot 1`] = `
+<div>
+  <main
+    class="flex align-items-center justify-content-center"
+    data-testid="about-page"
+  >
+    <h1>
+      About Page
+    </h1>
+  </main>
+</div>
+`;

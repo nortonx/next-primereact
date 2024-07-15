@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { PrimeReactProvider } from "primereact/api";
 import Header from "@/app/components/Header";
+import "primereact/resources/themes/lara-light-purple/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+import "primeflex/primeflex.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
