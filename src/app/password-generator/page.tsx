@@ -62,14 +62,16 @@ const PasswordGeneratorPage = () => {
                                 icon="pi pi-copy"
                                 className="mt-3"
                                 onClick={copyText}
+                                data-testid="copy-password-btn"
                             />
                             <div className="flex align-items-center mt-3">
                                 <Checkbox
                                     inputId="uppercaseLetters"
                                     checked={enableUppercaseLetters}
                                     onChange={() => setEnableUppercaseLetters(!enableUppercaseLetters)}
+                                    data-testid="uppercase-letters-checkbox"
                                 />
-                                <label htmlFor="uppercaseLetters" className="ml-2">
+                                <label htmlFor="uppercaseLetters" className="ml-2" data-testid="uppercase-letters-checkbox-label">
                                     Enable Uppercase Letters
                                 </label>
                             </div>
@@ -78,16 +80,18 @@ const PasswordGeneratorPage = () => {
                                     inputId="numbers"
                                     checked={enableNumbers}
                                     onChange={() => setEnableNumbers(!enableNumbers)}
+                                    data-testid="numbers-checkbox"
                                 />
-                                <label htmlFor="numbers" className="ml-2">Enable Numbers</label>
+                                <label htmlFor="numbers" className="ml-2" data-testid="numbers-checkbox-label">Enable Numbers</label>
                             </div>
                             <div className="flex align-items-center mt-3">
                                 <Checkbox
                                     inputId="specialCharacters"
                                     checked={enableSpecialCharacters}
                                     onChange={() => setEnableSpecialCharacters(!enableSpecialCharacters)}
+                                    data-testid="special-characters-checkbox"
                                 />
-                                <label htmlFor="specialCharacters" className="ml-2">Enable Special Characters</label>
+                                <label htmlFor="specialCharacters" className="ml-2" data-testid="special-characters-checkbox-label">Enable Special Characters</label>
                             </div>
                             <div className="flex align-items-center mt-3 ml-2 justify-content-center">
                                 <Knob
@@ -95,6 +99,7 @@ const PasswordGeneratorPage = () => {
                                     onChange={(e: KnobChangeEvent) => setRangeInputValue(e.value)}
                                     min={8}
                                     max={36}
+                                    data-testid="knob-btn"
                                 />
                             </div>
                             <div className="flex align-item-center mt-3 justify-content-around">
@@ -109,6 +114,7 @@ const PasswordGeneratorPage = () => {
                                     label="Clear Password"
                                     onClick={() => setPassword("")}
                                     icon="pi pi-ban"
+                                    data-testid="clear-password-btn"
                                 />
                                 <Toast ref={toast} />
                             </div>
