@@ -51,17 +51,17 @@ const WordCountPage = () => {
           data-testid="word-count-textarea"
         />
       </div>
-      <div className="counters flex gap-2 justify-content-around mt-3">
-        <Card title="Words" className="w-3" data-testid="words">
+      <div className="counters col-12 flex flex-wrap justify-content-center gap-2 mt-3">
+        <Card title="Words" className="w-4" data-testid="words">
           <span className="text-xl font-medium" data-testid="words-value">{wordCounter(content)}</span>
         </Card>
-        <Card title="Characters" className="w-3" data-testid="characters">
+        <Card title="Characters" className="w-4" data-testid="characters">
           <span className="text-xl font-medium" data-testid="characters-value">{characterCounter(content)}</span>
         </Card>
-        <Card title="Sentences" className="w-3">
+        <Card title="Sentences" className="w-4">
           <span className="text-xl font-medium">{sentencesCounter(content)}</span>
         </Card>
-        <Card title="Paragraphs" className="w-3">
+        <Card title="Paragraphs" className="w-4">
           <span className="text-xl font-medium">{paragraphsCounter(content)}</span>
         </Card>
       </div>
