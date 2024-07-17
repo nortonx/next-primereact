@@ -3,7 +3,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import { DataTable, DataTableFilterMeta } from "primereact/datatable"
 import { Column } from "primereact/column"
-import { FilterMatchMode, FilterOperator } from "primereact/api"
+import { FilterMatchMode } from "primereact/api"
 import { InputText } from "primereact/inputtext"
 import jsonData from "@/data/csvData.json"
 import type { Record } from "@/types/record.type"
@@ -27,12 +27,12 @@ const TableDataPage = () => {
 
   const onGlobalFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     
-    tickers.filter((record) => {
-      setTickers(prev => {
-        return prev.filter((record) => {
-          return record["ACT Symbol"].toLowerCase().includes(e.target.value.toLowerCase())
-        })
-      })
+    const filterTickers = (record: Record) => {
+      return record["ACT Symbol"].toLowerCase().includes(e.target.value.toLowerCase())
+    }
+    
+    setTickers(prev => {
+      return prev.filter(filterTickers)
     })
 
     setGlobalFilterValue(e.target.value)
