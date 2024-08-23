@@ -10,7 +10,7 @@ describe("Password Generator Page", () => {
     expect(container).toMatchSnapshot()
   })
 
-  it("should generate page when 'Generate Password' button is clicked", async () => {
+  it("should generate password when 'Generate Password' button is clicked", async () => {
     render(<PasswordGeneratorPage/>) 
     const passwordField = await screen.findByTestId("password-field")
     expect(passwordField.nodeValue).toBeFalsy()
@@ -18,4 +18,38 @@ describe("Password Generator Page", () => {
     fireEvent.click(generatePasswordBtn)
     expect(passwordField.nodeValue).toBeDefined()
   })
+
+  it("should clear password field when the button 'Clear Password' is clicked", async () => { 
+    render(<PasswordGeneratorPage/>) 
+    const passwordField = await screen.findByTestId("password-field")
+    const generatePasswordBtn = await screen.findByTestId("generate-password-btn")
+    fireEvent.click(generatePasswordBtn)
+    expect(passwordField.nodeValue).toBeDefined()
+    const clearPasswordBtn = await screen.findByTestId("clear-password-btn")
+    fireEvent.click(clearPasswordBtn)
+    expect(passwordField.nodeValue).toBeFalsy()
+  })
+
+  it("should copy password to clipboard when the button 'Copy Password' is clicked", async () => {
+    render(<PasswordGeneratorPage/>) 
+    const passwordField = await screen.findByTestId("password-field")
+    const generatePasswordBtn = await screen.findByTestId("generate-password-btn")
+    fireEvent.click(generatePasswordBtn)
+    expect(passwordField.nodeValue).toBeDefined()
+    const copyPasswordBtn = await screen.findByTestId("copy-password-btn")
+    fireEvent.click(copyPasswordBtn)
+    const toast = await screen.findByTestId("toast")
+    expect(toast).toBeDefined()
+    expect(passwordField.nodeValue).toBeDefined()
+  })
+
+  // it("should display a toast message when the button 'Copy Password' is clicked", async () => {
+  //   render(<PasswordGeneratorPage/>)
+  //   const generatePasswordBtn = await screen.findByTestId("generate-password-btn")
+  //   fireEvent.click(generatePasswordBtn)
+  //   const copyPasswordBtn = await screen.findByTestId("copy-password-btn")
+  //   fireEvent.click(copyPasswordBtn)
+  //   const toast = await screen.findByTestId("toast")
+  //   expect(toast).toBeDefined()
+  // })
 })

@@ -43,7 +43,9 @@ describe("usePasswordGenerator", () => {
       result.current.generatePassword();
     });
 
-    expect(result.current.checkSpecialCharacters(result.current.password)).toBe(true);
+    expect(result.current.checkSpecialCharacters(result.current.password)).toBe(
+      true,
+    );
   });
 
   it("should validate the generated password correctly", () => {
@@ -61,7 +63,7 @@ describe("usePasswordGenerator", () => {
 
   it("should return false if the password is not valid", () => {
     const { result } = renderHook(() => usePasswordGenerator());
-    
+
     act(() => {
       result.current.setEnableUppercaseLetters(false);
       result.current.setEnableNumbers(false);
@@ -69,6 +71,9 @@ describe("usePasswordGenerator", () => {
       result.current.generatePassword();
     });
 
+    expect(result.current.validatePassword(result.current.password)).toBe(
+      false,
+    );
     expect(result.current.validPassword).toBe(false);
-  })
+  });
 });

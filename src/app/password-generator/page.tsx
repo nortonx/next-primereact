@@ -116,7 +116,7 @@ const PasswordGeneratorPage = () => {
                                     icon="pi pi-ban"
                                     data-testid="clear-password-btn"
                                 />
-                                <Toast ref={toast} />
+                                <Toast ref={toast} data-testid="toast"/>
                             </div>
                         </div>
                     </div>
