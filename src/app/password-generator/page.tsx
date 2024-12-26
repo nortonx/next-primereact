@@ -22,11 +22,7 @@ const PasswordGeneratorPage = () => {
         setEnableNumbers,
         enableSpecialCharacters,
         setEnableSpecialCharacters,
-        checkNumbers,
-        checkSpecialCharacters,
-        checkUppercase,
         generatePassword,
-        validatePassword,
     } = usePasswordGenerator();
 
     const toast = useRef<Toast>(null);
